@@ -1327,26 +1327,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: speed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: sideMovementRoot
-      value: 
-      objectReference: {fileID: 1455443624}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: sideMovemntLimit
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: sideMovementLerpSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: sideMovementSensitivity
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
 --- !u!1001 &3567723513087504307
