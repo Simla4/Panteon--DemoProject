@@ -19,7 +19,7 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
     {
         joystickTip.position = eventData.position;
         var offset = Vector3.ClampMagnitude(joystickTip.position - joystickBase.position, 100);
-        joystickDirection = offset / 70f;
+        joystickDirection = offset / 100;
 
         joystickTip.position = joystickBase.position + offset;
     }
