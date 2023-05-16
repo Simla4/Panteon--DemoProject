@@ -1,5 +1,7 @@
 
+using UnityEngine;
+
 public interface IObstacle
 {
-    void OnPlayerCollisionWithObstacle();
+    void OnCharacterCollisionWithObstacle(GameObject character);
 }

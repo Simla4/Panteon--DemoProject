@@ -11,7 +11,7 @@ public class PlayerCollision : MonoBehaviour
 
         if (other.TryGetComponent<IObstacle>(out IObstacle obstacle))
         {
-            obstacle.OnPlayerCollisionWithObstacle();
+            obstacle.OnCharacterCollisionWithObstacle(gameObject);
         }
     }
 }

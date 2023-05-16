@@ -2419,6 +2419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5713b0a384da24f996fd75d3434c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 0}
 --- !u!1001 &2054287563
 PrefabInstance:
   m_ObjectHideFlags: 0

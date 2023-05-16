@@ -6,8 +6,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
-
-    [SerializeField] private Transform sideMovementRoot;
     
     [SerializeField] private float speed = 5;
     [SerializeField] private float rotationSpeed = 50;
