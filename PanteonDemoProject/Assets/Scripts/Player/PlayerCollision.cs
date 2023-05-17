@@ -12,6 +12,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.TryGetComponent<IObstacle>(out IObstacle obstacle))
         {
             obstacle.OnCharacterCollisionWithObstacle(gameObject);
+            EventManger.OnColiisionObstacle?.Invoke();
         }
     }
 }

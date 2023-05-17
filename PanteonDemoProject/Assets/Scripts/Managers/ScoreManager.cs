@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : MonoSingleton<ScoreManager>
 {
     #region Variables
 
     private int coinCount;
+    private int deathCount;
+
+    public int DeathCount => deathCount;
 
     #endregion
 
@@ -22,11 +25,13 @@ public class ScoreManager : MonoBehaviour
     private void OnEnable()
     {
         EventManger.OnCollectCoin += ChangeCoinCount;
+        EventManger.OnColiisionObstacle += ChangeDeathCount;
     }
 
     private void OnDisable()
     {
         EventManger.OnCollectCoin -= ChangeCoinCount;
+        EventManger.OnColiisionObstacle -= ChangeDeathCount;
     }
 
     #endregion
@@ -38,6 +43,11 @@ public class ScoreManager : MonoBehaviour
         coinCount++;
         PlayerPrefs.SetInt("CoinCount", coinCount);
         coinCount = PlayerPrefs.GetInt("CoinCount");
+    }
+
+    private void ChangeDeathCount()
+    {
+        deathCount++;
     }
 
     #endregion

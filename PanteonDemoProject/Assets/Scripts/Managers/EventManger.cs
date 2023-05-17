@@ -6,4 +6,5 @@ using UnityEngine;
 public static class EventManger
 {
     public static Action OnCollectCoin;
+    public static Action OnColiisionObstacle;
 }
