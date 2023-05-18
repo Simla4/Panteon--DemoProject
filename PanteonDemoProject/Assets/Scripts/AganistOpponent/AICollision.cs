@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AICollision : MonoBehaviour
@@ -8,5 +9,18 @@ public class AICollision : MonoBehaviour
         {
             obstacle.OnCharacterCollisionWithObstacle(gameObject);
         }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("RotatingPlatform"))
+        {
+            EventManger.OnAICollisionRotatingPlatform?.Invoke();
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        EventManger.OnAICollisionExitFromRotatingPlatform?.Invoke();
     }
 }

@@ -12,9 +12,8 @@ public class RotatingPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log(other.gameObject.name + "Enter.");
             var adjustSpeed = rotationSpeed * Time.deltaTime;
-            other.transform.position += Vector3.right * adjustSpeed;
+            other.transform.position += Vector3.left * adjustSpeed;
         }
         
     }

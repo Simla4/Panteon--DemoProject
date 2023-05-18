@@ -21,20 +21,45 @@ public class AIMovement : MonoBehaviour
     private void Start()
     {
         agent.SetDestination(targetPoint.position);
+        agent.speed = speed;
     }
 
     private void Update()
     {
-        MoveAI();
+        AIAnimation();
+    }
+
+    private void OnEnable()
+    {
+        EventManger.OnAICollisionRotatingPlatform += MoveAI;
+        EventManger.OnAICollisionExitFromRotatingPlatform += ReturnNavMeshControl;
+    }
+
+    private void OnDisable()
+    {
+        EventManger.OnAICollisionRotatingPlatform -= MoveAI;
+        EventManger.OnAICollisionExitFromRotatingPlatform -= ReturnNavMeshControl;
     }
 
     #endregion
 
     #region MyRegion
 
-    private void MoveAI()
+    private void AIAnimation()
     {
         animator.SetFloat("Speed", agent.speed);
+    }
+
+    private void MoveAI()
+    {
+        agent.enabled = false;
+        transform.position += Vector3.forward * speed * Time.deltaTime; 
+    }
+
+    private void ReturnNavMeshControl()
+    {
+        agent.enabled = true;
+        agent.SetDestination(targetPoint.position);
     }
     
     #endregion
