@@ -37,7 +37,5 @@ public class AIMovement : MonoBehaviour
         animator.SetFloat("Speed", agent.speed);
     }
     
-    
-
     #endregion
 }

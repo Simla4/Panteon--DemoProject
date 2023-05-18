@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817702393324590620}
   - component: {fileID: 1631098747}
+  - component: {fileID: 1926211938}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -87,6 +88,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!208 &1926211938
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817702393324590623}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.21, y: 0.5, z: 1.275}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: -1.32}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1817702393610081360
 PrefabInstance:
   m_ObjectHideFlags: 0

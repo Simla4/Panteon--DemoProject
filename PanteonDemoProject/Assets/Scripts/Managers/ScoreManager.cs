@@ -8,7 +8,7 @@ public class ScoreManager : MonoSingleton<ScoreManager>
     #region Variables
 
     private int coinCount;
-    private int deathCount;
+    private int deathCount = 0;
 
     public int DeathCount => deathCount;
 
