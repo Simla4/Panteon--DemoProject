@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private float speed = 8;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private Transform targetPoint;
+    [SerializeField] private NavMeshAgent agent;
+
     #endregion
 
     #region Callbacks
+
+    private void Start()
+    {
+        agent.SetDestination(targetPoint.position);
+    }
 
     private void Update()
     {
@@ -25,9 +34,7 @@ public class AIMovement : MonoBehaviour
 
     private void MoveAI()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
-        
-        animator.SetFloat("Speed", speed);
+        animator.SetFloat("Speed", agent.speed);
     }
     
     
