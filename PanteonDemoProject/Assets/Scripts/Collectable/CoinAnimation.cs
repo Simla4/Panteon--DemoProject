@@ -42,15 +42,22 @@ public class CoinAnimation : MonoBehaviour
         StartCoroutine(MoveCoinNumerator(spawnPos));
     }
 
+    private Vector3 ConvertWorldToUIWorldCameraPosition(Vector3 spawnPos)
+    {
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, spawnPos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(targetPos, screenPoint, null, out Vector2 rectTransformPoint);
+        return rectTransformPoint;
+    }
+
     IEnumerator MoveCoinNumerator(Vector3 spawnPos)
     {
 
         for (int i = 0; i < coinCount; i++)
         {
-            //Canvas.ForceUpdateCanvases();
             var coin = coinPool.Spawn();
             coin.transform.SetParent(coinParent);
-
+            coin.transform.position = ConvertWorldToUIWorldCameraPosition(spawnPos);
+            
             coin.transform.DOMove(targetPos.position, duration)
                 .OnComplete(() =>
                 {
