@@ -11,6 +11,8 @@ public class CoinAnimation : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private int coinCount = 5;
     [SerializeField] private Transform coinParent;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private float coinSpawnOffset = 2;
     
     private Pool<MovableCoin> coinPool;
 
@@ -42,11 +44,11 @@ public class CoinAnimation : MonoBehaviour
         StartCoroutine(MoveCoinNumerator(spawnPos));
     }
 
-    private Vector3 ConvertWorldToUIWorldCameraPosition(Vector3 spawnPos)
+    private Vector3 WorldToUISpace(Vector3 worldPosition)
     {
-        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, spawnPos);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(targetPos, screenPoint, null, out Vector2 rectTransformPoint);
-        return rectTransformPoint;
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);            
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, screenPos, canvas.worldCamera, out Vector2 localPoint);
+        return canvas.transform.TransformPoint(localPoint);
     }
 
     IEnumerator MoveCoinNumerator(Vector3 spawnPos)
@@ -56,7 +58,7 @@ public class CoinAnimation : MonoBehaviour
         {
             var coin = coinPool.Spawn();
             coin.transform.SetParent(coinParent);
-            coin.transform.position = ConvertWorldToUIWorldCameraPosition(spawnPos);
+            coin.transform.position = WorldToUISpace(spawnPos + Vector3.up * coinSpawnOffset);
             
             coin.transform.DOMove(targetPos.position, duration)
                 .OnComplete(() =>

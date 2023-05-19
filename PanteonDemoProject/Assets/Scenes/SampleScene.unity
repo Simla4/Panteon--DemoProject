@@ -1101,7 +1101,7 @@ RectTransform:
   - {fileID: 1221662641}
   - {fileID: 66279437}
   m_Father: {fileID: 863235071}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1925,6 +1925,8 @@ MonoBehaviour:
   duration: 1
   coinCount: 5
   coinParent: {fileID: 863235071}
+  canvas: {fileID: 863235070}
+  coinSpawnOffset: 2
 --- !u!1 &746390803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,7 +2458,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 464967372}
-  - {fileID: 1607538659}
   - {fileID: 1394158381}
   - {fileID: 430885287}
   - {fileID: 956070807}
@@ -2483,7 +2484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &867828229
 Transform:
   m_ObjectHideFlags: 0
@@ -2722,7 +2723,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863235071}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &956070808
 SpriteRenderer:
@@ -3221,7 +3222,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 1172462903}
-  cooldown: -274.71408
+  cooldown: -340.51132
   currentReader:
     requested: 0
     buffer: {fileID: 0}
@@ -3873,7 +3874,7 @@ RectTransform:
   - {fileID: 1350383741}
   - {fileID: 1950027706}
   m_Father: {fileID: 863235071}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4404,96 +4405,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5004097231342793876, guid: 3307284af3a5e0640bbb491f86e21ac1, type: 3}
   m_PrefabInstance: {fileID: 1775407256}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1607538658
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1607538659}
-  - component: {fileID: 1607538661}
-  - component: {fileID: 1607538660}
-  - component: {fileID: 1607538662}
-  m_Layer: 5
-  m_Name: CoinPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1607538659
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607538658}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 863235071}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -197}
-  m_SizeDelta: {x: 125, y: 125}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1607538660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607538658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3d2e336708d3374595de72b8d5c78fb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1607538661
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607538658}
-  m_CullTransparentMesh: 1
---- !u!114 &1607538662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607538658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da06a0b4ad185d44885d0851b8e762ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 1607538659}
 --- !u!1001 &1609327938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5932,7 +5843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5713b0a384da24f996fd75d3434c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 1607538662}
+  coinPrefab: {fileID: 2034581454910843680, guid: 1a64907dec90cce42851ce6ee154be5c, type: 3}
 --- !u!1001 &2006131006
 PrefabInstance:
   m_ObjectHideFlags: 0
