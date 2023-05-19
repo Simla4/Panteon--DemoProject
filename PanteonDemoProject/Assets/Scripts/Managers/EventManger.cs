@@ -5,8 +5,7 @@ using UnityEngine;
 
 public static class EventManger
 {
-    public static Action OnCollectCoin;
+    public static Action<Vector3> OnCollectCoin;
+    public static Action OnMoveCoin;
     public static Action OnColiisionObstacle;
-    public static Action OnAICollisionRotatingPlatform;
-    public static Action OnAICollisionExitFromRotatingPlatform;
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AICollision : MonoBehaviour
 {
+    [SerializeField] private AIMovement aiMovement;
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.TryGetComponent<IObstacle>(out IObstacle obstacle))
@@ -15,8 +16,7 @@ public class AICollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            EventManger.OnAICollisionRotatingPlatform?.Invoke();
-            Debug.Log(other.gameObject.name + "Stay (AI)");
+            aiMovement.MoveAI();
         }
     }
 
@@ -24,8 +24,7 @@ public class AICollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            EventManger.OnAICollisionExitFromRotatingPlatform?.Invoke();
-            Debug.Log(other.gameObject.name + "Exit");
+            aiMovement.ReturnNavMeshAgent();
         }
     }
 }

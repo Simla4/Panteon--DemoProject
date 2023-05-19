@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+        ControlYAxis();
     }
 
     #endregion
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        var worldDirection = new Vector3(joystickDirection.x, transform.position.y, joystickDirection.y);
+        var worldDirection = new Vector3(joystickDirection.x, 0, joystickDirection.y);
         transform.position += worldDirection * (speed * Time.deltaTime);
         var pos = transform.position;
         var newPosX = Mathf.Clamp(pos.x, -sideMovemntLimit, sideMovemntLimit);
@@ -45,6 +46,16 @@ public class PlayerMovement : MonoBehaviour
             Quaternion newRotation = GetRotation();
             transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    private void ControlYAxis()
+    {
+        if (transform.position.y <= -5f)
+        {
+            transform.position = Vector3.zero;
+            EventManger.OnColiisionObstacle?.Invoke();
+        }
+            
     }
     
     private Quaternion GetRotation()

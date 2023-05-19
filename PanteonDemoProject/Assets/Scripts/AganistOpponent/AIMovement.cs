@@ -9,6 +9,7 @@ public class AIMovement : MonoBehaviour
     #region Variables
 
     [SerializeField] private float speed = 8;
+    [SerializeField] private float sidewaySpeed = 3;
     [SerializeField] private Animator animator;
 
     [SerializeField] private Transform targetPoint;
@@ -27,18 +28,7 @@ public class AIMovement : MonoBehaviour
     private void Update()
     {
         AIAnimation();
-    }
-
-    private void OnEnable()
-    {
-        EventManger.OnAICollisionRotatingPlatform += MoveAI;
-        EventManger.OnAICollisionExitFromRotatingPlatform += ReturnNavMeshControl;
-    }
-
-    private void OnDisable()
-    {
-        EventManger.OnAICollisionRotatingPlatform -= MoveAI;
-        EventManger.OnAICollisionExitFromRotatingPlatform -= ReturnNavMeshControl;
+        ControlYAxis();
     }
 
     #endregion
@@ -50,16 +40,34 @@ public class AIMovement : MonoBehaviour
         animator.SetFloat("Speed", agent.speed);
     }
 
-    private void MoveAI()
+    public void MoveAI()
     {
         agent.enabled = false;
-        transform.position += Vector3.forward * speed * Time.deltaTime; 
+        transform.position += Vector3.forward * speed * Time.deltaTime;
+
+        if (transform.position.x < -1)
+        {
+            transform.position += Vector3.right * sidewaySpeed * Time.deltaTime;
+        }
+        else if(transform.position.x > 1)
+        {
+            transform.position += Vector3.left * sidewaySpeed * Time.deltaTime;
+        }
     }
 
-    private void ReturnNavMeshControl()
+    public void ReturnNavMeshAgent()
     {
         agent.enabled = true;
         agent.SetDestination(targetPoint.position);
+    }
+    
+    private void ControlYAxis()
+    {
+        if (transform.position.y <= -3.5f)
+        {
+            transform.position = Vector3.zero;
+        }
+            
     }
     
     #endregion

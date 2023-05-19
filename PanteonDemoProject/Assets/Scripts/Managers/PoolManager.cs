@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PoolManager: MonoSingleton<PoolManager>
 {
-    public Pool<Coin> coinPool { get; } = new Pool<Coin>();
-    [SerializeField] private Coin coinPrefab;
+    public Pool<MovableCoin> coinPool { get; } = new Pool<MovableCoin>();
+    [SerializeField] private MovableCoin coinPrefab;
 
     private void Awake()
     {

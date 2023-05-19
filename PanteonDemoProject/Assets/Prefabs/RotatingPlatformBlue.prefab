@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6963974691143818717}
   - component: {fileID: 3469287837223321042}
   - component: {fileID: 3469287837223321047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotatingPlatformBlue
   m_TagString: RotatingPlatform
   m_Icon: {fileID: 0}
