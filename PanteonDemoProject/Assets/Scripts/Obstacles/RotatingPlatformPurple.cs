@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class RotatingPlatform : MonoBehaviour
+public class RotatingPlatformPurple : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 2;
     
@@ -14,7 +14,7 @@ public class RotatingPlatform : MonoBehaviour
         {
             Debug.Log(other.gameObject.name + "Stay");
             var adjustSpeed = rotationSpeed * Time.deltaTime;
-            other.transform.position += Vector3.left * adjustSpeed;
+            other.transform.position += Vector3.right * adjustSpeed;
         }
         
     }

@@ -16,11 +16,16 @@ public class AICollision : MonoBehaviour
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
             EventManger.OnAICollisionRotatingPlatform?.Invoke();
+            Debug.Log(other.gameObject.name + "Stay (AI)");
         }
     }
 
     private void OnCollisionExit(Collision other)
     {
-        EventManger.OnAICollisionExitFromRotatingPlatform?.Invoke();
+        if (other.gameObject.CompareTag("RotatingPlatform"))
+        {
+            EventManger.OnAICollisionExitFromRotatingPlatform?.Invoke();
+            Debug.Log(other.gameObject.name + "Exit");
+        }
     }
 }
