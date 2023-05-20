@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 157484097159891803}
   - component: {fileID: 9184163096918409476}
   - component: {fileID: 9184163096918409473}
-  - component: {fileID: 5715579498243931345}
+  - component: {fileID: 1829733526715916197}
   m_Layer: 6
   m_Name: RotatingPlatformPurple
   m_TagString: RotatingPlatform
@@ -138,7 +138,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 62
   m_CollisionDetection: 0
---- !u!114 &5715579498243931345
+--- !u!114 &1829733526715916197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8251693173837564747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a8512af3642ec41b235d01613c0d85, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7a5662feb09ca49a76899d3d2250c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: -2
+  rotationSpeed: 2
+  isPlatformRotatingRight: 1
