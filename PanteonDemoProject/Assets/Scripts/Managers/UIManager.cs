@@ -20,13 +20,13 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         EventManger.OnMoveCoin += ChangeCoinTxt;
-        EventManger.OnColiisionObstacle += ChangeDeathCountTxt;
+        EventManger.OnCollisionObstacle += ChangeDeathCountTxt;
     }
 
     private void OnDisable()
     {
         EventManger.OnMoveCoin -= ChangeCoinTxt;
-        EventManger.OnColiisionObstacle -= ChangeDeathCountTxt;
+        EventManger.OnCollisionObstacle -= ChangeDeathCountTxt;
     }
 
     #endregion

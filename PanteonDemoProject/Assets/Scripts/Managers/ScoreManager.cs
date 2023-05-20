@@ -25,13 +25,13 @@ public class ScoreManager : MonoSingleton<ScoreManager>
     private void OnEnable()
     {
         EventManger.OnMoveCoin += ChangeCoinCount;
-        EventManger.OnColiisionObstacle += ChangeDeathCount;
+        EventManger.OnCollisionObstacle += ChangeDeathCount;
     }
 
     private void OnDisable()
     {
         EventManger.OnMoveCoin -= ChangeCoinCount;
-        EventManger.OnColiisionObstacle -= ChangeDeathCount;
+        EventManger.OnCollisionObstacle -= ChangeDeathCount;
     }
 
     #endregion

@@ -7,5 +7,5 @@ public static class EventManger
 {
     public static Action<Vector3> OnCollectCoin;
     public static Action OnMoveCoin;
-    public static Action OnColiisionObstacle;
+    public static Action OnCollisionObstacle;
 }
