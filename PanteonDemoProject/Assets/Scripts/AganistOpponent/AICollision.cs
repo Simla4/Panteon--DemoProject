@@ -17,19 +17,22 @@ public class AICollision : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
             aiMovement.MoveAI();
+            
+            Debug.Log( gameObject.name + "AI Character");
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
             aiMovement.ReturnNavMeshAgent();
+            Debug.Log( gameObject.name + "AI Character Exit");
         }
     }
 }

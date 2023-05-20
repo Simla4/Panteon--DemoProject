@@ -7,6 +7,7 @@ using UnityEngine;
 public class CameraManager : MonoSingleton<CameraManager>
 {
     [SerializeField] private CinemachineVirtualCamera paintableWallCamera;
+    [SerializeField] private CinemachineVirtualCamera mainCamera;
 
     private void OnEnable()
     {

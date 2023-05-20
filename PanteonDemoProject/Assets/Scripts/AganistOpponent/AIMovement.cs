@@ -14,6 +14,7 @@ public class AIMovement : MonoBehaviour
 
     [SerializeField] private Transform targetPoint;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private Rigidbody rb;
 
     #endregion
 
@@ -45,13 +46,17 @@ public class AIMovement : MonoBehaviour
         agent.enabled = false;
         transform.position += Vector3.forward * speed * Time.deltaTime;
 
+
         if (transform.position.x < -1)
         {
             transform.position += Vector3.right * sidewaySpeed * Time.deltaTime;
+            Debug.Log(gameObject.name + "moving right");
         }
         else if(transform.position.x > 1)
         {
             transform.position += Vector3.left * sidewaySpeed * Time.deltaTime;
+            Debug.Log(gameObject.name + "moving left");
+
         }
     }
 
@@ -65,9 +70,15 @@ public class AIMovement : MonoBehaviour
     {
         if (transform.position.y <= -3.5f)
         {
-            transform.position = Vector3.zero;
+            ReturnToStartPosition();
         }
             
+    }
+
+    private void ReturnToStartPosition()
+    {
+        transform.position = Vector3.zero;
+        ReturnNavMeshAgent();
     }
     
     #endregion

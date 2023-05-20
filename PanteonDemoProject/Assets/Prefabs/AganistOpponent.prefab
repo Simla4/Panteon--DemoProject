@@ -133,11 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d841ea9d02b6d458dbba87924d24ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  sidewaySpeed: 3.5
+  speed: 7
+  sidewaySpeed: 4
   animator: {fileID: 3170882471309954691}
   targetPoint: {fileID: 0}
   agent: {fileID: 1064911832}
+  rb: {fileID: 4064504208768184152}
 --- !u!114 &2177157495165615234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,14 +166,14 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 175
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 1
 --- !u!1001 &5004097231786743808
 PrefabInstance:
   m_ObjectHideFlags: 0
