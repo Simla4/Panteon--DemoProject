@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject paintUI;
     [SerializeField] private GameObject inGametUI;
+    [SerializeField] private GameObject starttUI;
+    [SerializeField] private GameObject finishtUI;
 
     [SerializeField] private TextMeshProUGUI coinTxt;
     [SerializeField] private TextMeshProUGUI deathCountTxt;
@@ -25,8 +27,8 @@ public class UIManager : MonoBehaviour
     {
         EventManger.OnMoveCoin += ChangeCoinTxt;
         EventManger.OnDeathCountChanged += ChangeDeathCountTxt;
-        EventManger.OnPlayerReachFinish += ShowPaintUI;
         EventManger.OnPlayerRankChanged += ChangePlayerRankTxt;
+        EventManger.OnPlayerReachFinish += ShowPaintUI;
     }
 
     private void OnDisable()
@@ -60,6 +62,24 @@ public class UIManager : MonoBehaviour
     {
         inGametUI.SetActive(false);
         paintUI.SetActive(true);
+    }
+
+    private void ShowStartUI()
+    {
+        starttUI.SetActive(true);
+        finishtUI.SetActive(false);
+    }
+    
+    private void ShowInGameUI()
+    {
+        inGametUI.SetActive(true);
+        starttUI.SetActive(false);
+    }
+    
+    private void ShowFinishtUI()
+    {
+        finishtUI.SetActive(true);
+        paintUI.SetActive(false);
     }
     
 

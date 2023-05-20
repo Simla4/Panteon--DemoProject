@@ -11,10 +11,10 @@ public class AICollision : MonoBehaviour
             obstacle.OnCharacterCollisionWithObstacle(gameObject);
         }
 
-        // if (other.CompareTag("Finish"))
-        // {
-        //     gameObject.SetActive(false);
-        // }
+        if (other.CompareTag("Finish"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionStay(Collision other)
