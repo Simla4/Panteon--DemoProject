@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -22,6 +23,16 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
         ControlYAxis();
+    }
+
+    private void OnEnable()
+    {
+        EventManger.OnPlayerReachFinish += StopPlayer;
+    }
+
+    private void OnDisable()
+    {
+        EventManger.OnPlayerReachFinish -= StopPlayer;
     }
 
     #endregion
@@ -53,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
             EventManger.OnCollisionObstacle?.Invoke();
         }
             
+    }
+
+    private void StopPlayer()
+    {
+        speed = 0;
     }
     
     private Quaternion GetRotation()

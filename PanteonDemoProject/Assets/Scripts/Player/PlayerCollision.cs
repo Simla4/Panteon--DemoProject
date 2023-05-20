@@ -15,5 +15,10 @@ public class PlayerCollision : MonoBehaviour
             obstacle.OnCharacterCollisionWithObstacle(gameObject);
             EventManger.OnCollisionObstacle?.Invoke();
         }
+
+        if (other.CompareTag("Finish"))
+        {
+            EventManger.OnPlayerReachFinish?.Invoke();
+        }
     }
 }

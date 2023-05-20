@@ -48,6 +48,7 @@ public class ScoreManager : MonoSingleton<ScoreManager>
     private void ChangeDeathCount()
     {
         deathCount++;
+        EventManger.OnDeathCountChanged?.Invoke();
     }
 
     #endregion
