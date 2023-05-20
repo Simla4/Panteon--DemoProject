@@ -18,7 +18,7 @@ public class ShiningObstacle : MonoBehaviour, IObstacle
     {
         var pos = transform.position;
         
-        if (pos.x == sideMovementLimit[nextPosIndex])
+        if (Mathf.Approximately(pos.x, sideMovementLimit[nextPosIndex]))
         {
             nextPosIndex++;
             if (nextPosIndex == sideMovementLimit.Count)
