@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI coinTxt;
     [SerializeField] private TextMeshProUGUI deathCountTxt;
+    [SerializeField] private TextMeshProUGUI rankTxt;
 
     #endregion
 
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
         EventManger.OnMoveCoin += ChangeCoinTxt;
         EventManger.OnDeathCountChanged += ChangeDeathCountTxt;
         EventManger.OnPlayerReachFinish += ShowPaintUI;
+        EventManger.OnPlayerRankChanged += ChangePlayerRankTxt;
     }
 
     private void OnDisable()
@@ -32,6 +34,7 @@ public class UIManager : MonoBehaviour
         EventManger.OnMoveCoin -= ChangeCoinTxt;
         EventManger.OnDeathCountChanged -= ChangeDeathCountTxt;
         EventManger.OnPlayerReachFinish -= ShowPaintUI;
+        EventManger.OnPlayerRankChanged -= ChangePlayerRankTxt;
     }
 
     #endregion
@@ -46,6 +49,11 @@ public class UIManager : MonoBehaviour
     private void ChangeDeathCountTxt()
     {
         deathCountTxt.text = ScoreManager.Instance.DeathCount.ToString();
+    }
+
+    private void ChangePlayerRankTxt(int rank)
+    {
+        rankTxt.text = (rank + 1).ToString();
     }
 
     private void ShowPaintUI()
