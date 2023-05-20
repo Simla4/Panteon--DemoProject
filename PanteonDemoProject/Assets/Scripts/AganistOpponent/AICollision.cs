@@ -4,7 +4,7 @@ using UnityEngine;
 public class AICollision : MonoBehaviour
 {
     [SerializeField] private AIMovement aiMovement;
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent<IObstacle>(out IObstacle obstacle))
         {
