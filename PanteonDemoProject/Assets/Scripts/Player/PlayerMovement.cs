@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float speed = 5;
     [SerializeField] private float rotationSpeed = 50;
-    [SerializeField] private float sideMovemntLimit;
+    [SerializeField] private float sideMovementLimit;
 
     [SerializeField] private Animator animator;
 
@@ -36,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
         var worldDirection = new Vector3(joystickDirection.x, 0, joystickDirection.y);
         transform.position += worldDirection * (speed * Time.deltaTime);
         var pos = transform.position;
-        var newPosX = Mathf.Clamp(pos.x, -sideMovemntLimit, sideMovemntLimit);
-        transform.position = new Vector3(newPosX, transform.position.y, transform.position.z);
+        var newPosX = Mathf.Clamp(pos.x, -sideMovementLimit, sideMovementLimit);
+        transform.position = new Vector3(newPosX, pos.y, pos.z);
 
         animator.SetFloat("Speed", Mathf.Abs(joystickDirection.y));
         
@@ -53,15 +50,13 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y <= -5f)
         {
             transform.position = Vector3.zero;
-            EventManger.OnColiisionObstacle?.Invoke();
+            EventManger.OnCollisionObstacle?.Invoke();
         }
             
     }
     
     private Quaternion GetRotation()
     {
-        
-
         float angle = Mathf.Atan2(joystickDirection.x, joystickDirection.y) * Mathf.Rad2Deg;
 
         Quaternion rotation = Quaternion.Euler(0, angle, 0);
