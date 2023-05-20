@@ -22,8 +22,6 @@ public class AICollision : MonoBehaviour
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
             aiMovement.MoveAI();
-            
-            Debug.Log( gameObject.name + "AI Character");
         }
     }
 
@@ -32,7 +30,6 @@ public class AICollision : MonoBehaviour
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
             aiMovement.ReturnNavMeshAgent();
-            Debug.Log( gameObject.name + "AI Character Exit");
         }
     }
 }

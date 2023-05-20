@@ -172,7 +172,7 @@ NavMeshAgent:
   m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 1
+  m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
 --- !u!1001 &5004097231786743808
 PrefabInstance:
