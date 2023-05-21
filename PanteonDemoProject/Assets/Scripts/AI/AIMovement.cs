@@ -23,16 +23,24 @@ public class AIMovement : MonoBehaviour
 
     private void Start()
     {
-        targetPoint = FinishPath.Instance.FinishPathTransform;
-        agent.SetDestination(targetPoint.position);
-        agent.speed = speed;
-        firstPos = transform.position;
+        StartCoroutine(AsigdDataEnumerator());
     }
 
     private void Update()
     {
         AIAnimation();
         ControlYAxis();
+    }
+
+    private void OnEnable()
+    {
+        EventManger.OnLoadedNextLevel += ResetAI;
+    }
+
+    private void OnDisable()
+    {
+        EventManger.OnLoadedNextLevel -= ResetAI;
+
     }
 
     #endregion
@@ -63,7 +71,15 @@ public class AIMovement : MonoBehaviour
 
     private void ResetAI()
     {
+        
+    }
+
+    IEnumerator ResetAINumarator()
+    {
+        yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(true);
+        agent.SetDestination(targetPoint.position);
+        transform.position = firstPos;
     }
 
     public void ReturnNavMeshAgent()
@@ -85,6 +101,16 @@ public class AIMovement : MonoBehaviour
     {
         transform.position = Vector3.zero;
         ReturnNavMeshAgent();
+    }
+
+    IEnumerator AsigdDataEnumerator()
+    {
+        yield return new WaitForSeconds(0.25f);
+        
+        targetPoint = FinishPath.Instance.FinishPathTransform;
+        agent.SetDestination(targetPoint.position);
+        agent.speed = speed;
+        firstPos = transform.position;
     }
     
     #endregion

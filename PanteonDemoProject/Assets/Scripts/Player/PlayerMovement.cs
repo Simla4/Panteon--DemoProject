@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
         return rotation;
     }
-    
-    
+
     #endregion
 }

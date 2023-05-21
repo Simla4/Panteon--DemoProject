@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    #region Callbacks
+
     void Start()
     {
-        Time.timeScale = 0;
+        StopGame();
     }
+
+    #endregion
+
+    #region OtherMethod
 
     public void StartGame()
     {
@@ -16,5 +21,17 @@ public class GameManager : MonoBehaviour
         
         EventManger.OnGameStart?.Invoke();
     }
+
+    public void StopGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void NextLevel()
+    {
+        EventManger.OnNextLevel?.Invoke();
+    }
+
+    #endregion
     
 }
