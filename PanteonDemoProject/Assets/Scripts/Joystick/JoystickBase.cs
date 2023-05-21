@@ -17,11 +17,11 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
 
     public void OnDrag(PointerEventData eventData)
     {
-        joystickTip.anchoredPosition = eventData.position;
-        var offset = Vector2.ClampMagnitude(joystickTip.anchoredPosition - joystickBase.anchoredPosition, 100);
-        joystickDirection = offset / 100;
+        joystickTip.position = eventData.position;
+        var offset = Vector3.ClampMagnitude(joystickTip.position - joystickBase.position, 60);
+        joystickDirection = offset / 60;
 
-        joystickTip.anchoredPosition = joystickBase.anchoredPosition + (Vector2)offset;
+        joystickTip.position = joystickBase.position + offset;
     }
 
     public void OnPointerDown(PointerEventData eventData)
