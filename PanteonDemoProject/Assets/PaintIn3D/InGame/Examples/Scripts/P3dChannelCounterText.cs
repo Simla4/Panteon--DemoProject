@@ -72,6 +72,8 @@ namespace PaintIn3D.Examples
 			final = final.Replace("{PERCENT}", percent.ToString());
 
 			cachedText.text = final;
+			
+			
 		}
 	}
 }

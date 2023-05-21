@@ -3832,6 +3832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 1228955878}
+  navMeshSurface: {fileID: 1390428459}
+  channelCounterText: {fileID: 1950027707}
 --- !u!1 &1668018511
 GameObject:
   m_ObjectHideFlags: 0

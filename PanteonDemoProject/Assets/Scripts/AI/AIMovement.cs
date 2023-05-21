@@ -71,7 +71,7 @@ public class AIMovement : MonoBehaviour
 
     private void ResetAI()
     {
-        
+        StartCoroutine(ResetAINumarator());
     }
 
     IEnumerator ResetAINumarator()

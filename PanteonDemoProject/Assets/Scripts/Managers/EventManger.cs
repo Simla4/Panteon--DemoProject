@@ -12,6 +12,7 @@ public static class EventManger
     public static Action OnPlayerReachFinish;
     public static Action OnGameStart;
     public static Action OnNextLevel;
+    public static Action OnLevelCompleted;
     public static Action OnLoadedNextLevel;
     public static Action<int> OnPlayerRankChanged;
 }
