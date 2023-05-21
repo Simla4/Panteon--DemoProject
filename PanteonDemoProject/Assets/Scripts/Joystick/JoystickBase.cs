@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,19 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
 
     [HideInInspector] public Vector3 joystickDirection;
 
+    private void OnEnable()
+    {
+        EventManger.OnPlayerReachFinish += ResetJoystick;
+    }
+
+    private void OnDisable()
+    {
+        EventManger.OnPlayerReachFinish -= ResetJoystick;
+    }
+
     public void OnPointerUp(PointerEventData eventData)
     {
-        joystickTip.position = joystickBase.position;
-        joystickDirection = Vector3.zero;
+        ResetJoystick();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -26,6 +36,13 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        
+    }
+
+    private void ResetJoystick()
+    {
+        joystickDirection = Vector3.zero;
+        joystickTip.position = joystickBase.position;
         
     }
 }
