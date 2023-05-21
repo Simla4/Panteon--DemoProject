@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     {
         if (isPaintingActive == true)
         {
-            if (channelCounterText.DecimalPlaces >= 100)
+            if (channelCounterText.GetCurrentPercent() >= 100)
             {
                 EventManger.OnLevelCompleted?.Invoke();
             }

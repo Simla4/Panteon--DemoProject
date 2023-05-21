@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
         EventManger.OnPlayerRankChanged += ChangePlayerRankTxt;
         EventManger.OnPlayerReachFinish += ShowPaintUI;
         EventManger.OnGameStart += ShowInGameUI;
+        EventManger.OnNextLevel += ShowStartUI;
         EventManger.OnLevelCompleted += ShowFinishtUI;
     }
 
@@ -41,6 +42,7 @@ public class UIManager : MonoBehaviour
         EventManger.OnPlayerRankChanged -= ChangePlayerRankTxt;
         EventManger.OnGameStart -= ShowInGameUI;
         EventManger.OnLevelCompleted -= ShowFinishtUI;
+        EventManger.OnNextLevel -= ShowStartUI;
     }
 
     #endregion
