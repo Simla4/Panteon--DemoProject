@@ -37,6 +37,8 @@ namespace PaintIn3D.Examples
 		/// {PERCENT} = Percentage of pixels that have been painted.</summary>
 		public string Format { set { format = value; } get { return format; } } [Multiline] [SerializeField] private string format = "{PERCENT}";
 
+		private float currentPercent;
+		
 		[System.NonSerialized]
 		private Text cachedText;
 
@@ -72,8 +74,14 @@ namespace PaintIn3D.Examples
 			final = final.Replace("{PERCENT}", percent.ToString());
 
 			cachedText.text = final;
-			
-			
+
+			currentPercent = percent;
+
+		}
+
+		public float GetCurrentPercent()
+		{
+			return currentPercent;
 		}
 	}
 }
