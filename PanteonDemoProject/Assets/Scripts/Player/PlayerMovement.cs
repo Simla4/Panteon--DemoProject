@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
     private void StopPlayer()
     {
         speed = 0;
-        animator.SetFloat("Speed", Mathf.Abs(speed));
+        animator.SetFloat("Speed", 0);
     }
     
     private Quaternion GetRotation()

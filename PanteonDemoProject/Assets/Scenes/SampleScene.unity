@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 10, z: -20}
+  m_FollowOffset: {x: 0, y: 10, z: -21.19}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -1107,6 +1107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359744307}
+  - component: {fileID: 359744308}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1129,6 +1130,18 @@ Transform:
   m_Father: {fileID: 1681381266}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359744308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359744306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd54a03a24171164087ac3dc1efd1676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &364546243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1237,11 +1250,11 @@ RectTransform:
   m_Father: {fileID: 489625425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -412.15}
-  m_SizeDelta: {x: 310, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: -736.1}
+  m_SizeDelta: {x: 310, y: 195.9}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &404125581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 404125582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 359744308}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &404125582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,7 +1576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &489625425
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1836,8 +1861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintUI: {fileID: 560163955}
   inGametUI: {fileID: 944285401}
-  starttUI: {fileID: 0}
-  finishtUI: {fileID: 0}
+  starttUI: {fileID: 489625424}
+  finishtUI: {fileID: 111421008}
   coinTxt: {fileID: 778141746}
   deathCountTxt: {fileID: 1451558599}
   rankTxt: {fileID: 1815024819}
@@ -2348,7 +2373,7 @@ MonoBehaviour:
   coinCount: 5
   coinParent: {fileID: 863235071}
   canvas: {fileID: 863235070}
-  coinSpawnOffset: 2
+  coinSpawnOffset: 1.75
 --- !u!1 &746390803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3275,15 +3300,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899249702}
-  m_LocalRotation: {x: 0.15847255, y: 0.000000008494475, z: -0.0000000013633698, w: 0.9873634}
-  m_LocalPosition: {x: 0, y: 10, z: -20}
+  m_LocalRotation: {x: 0.10799937, y: -0, z: -0, w: 0.994151}
+  m_LocalPosition: {x: 0, y: 10, z: -21.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 111867305}
   m_Father: {fileID: 49242617}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.4, y: 0, z: 0}
 --- !u!1 &899698189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,8 +3585,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.15847255, y: 0.000000008494475, z: -0.0000000013633698, w: 0.9873634}
-  m_LocalPosition: {x: 0, y: 10, z: -20}
+  m_LocalRotation: {x: 0.10799937, y: -0, z: -0, w: 0.994151}
+  m_LocalPosition: {x: 0, y: 10, z: -21.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4943,8 +4968,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
