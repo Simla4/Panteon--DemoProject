@@ -42,10 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1336448635962611134}
   - component: {fileID: 3810608082850427026}
-  - component: {fileID: 1455443626}
   - component: {fileID: 6354005006679476168}
   - component: {fileID: 242687403357847650}
   - component: {fileID: 409863085758107262}
+  - component: {fileID: 8586665942887736716}
   m_Layer: 0
   m_Name: PlayerRoot
   m_TagString: Player
@@ -84,28 +84,7 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 7
   sideMovementLimit: 4.8
-  animator: {fileID: 1455443626}
---- !u!95 &1455443626
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336448635962611120}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
-  m_Controller: {fileID: 9100000, guid: ecfbd00f303c5a74d9d5e6bb44d1f464, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  animator: {fileID: 8586665942887736716}
 --- !u!136 &6354005006679476168
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -148,6 +127,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb896f3ee8f707945b34b5f9e6448d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8586665942887736716
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336448635962611120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
+  m_Controller: {fileID: 9100000, guid: ecfbd00f303c5a74d9d5e6bb44d1f464, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2439712065685833196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,13 +205,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ecfbd00f303c5a74d9d5e6bb44d1f464, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
 --- !u!4 &2761023574185419271 stripped
 Transform:
