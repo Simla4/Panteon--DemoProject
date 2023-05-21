@@ -15,6 +15,8 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private Transform targetPoint;
     [SerializeField] private NavMeshAgent agent;
 
+    private Vector3 firstPos;
+
     #endregion
 
     #region Callbacks
@@ -23,12 +25,24 @@ public class AIMovement : MonoBehaviour
     {
         agent.SetDestination(targetPoint.position);
         agent.speed = speed;
+        firstPos = transform.position;
     }
 
     private void Update()
     {
         AIAnimation();
         ControlYAxis();
+    }
+
+    private void OnEnable()
+    {
+        EventManger.OnPlayerReachFinish += StopAI;
+    }
+
+    private void OnDisable()
+    {
+        EventManger.OnPlayerReachFinish -= StopAI;
+        
     }
 
     #endregion
@@ -55,6 +69,12 @@ public class AIMovement : MonoBehaviour
             transform.position += Vector3.left * sidewaySpeed * Time.deltaTime;
 
         }
+    }
+
+    private void StopAI()
+    {
+        agent.speed = 0;
+        transform.position = firstPos;
     }
 
     public void ReturnNavMeshAgent()

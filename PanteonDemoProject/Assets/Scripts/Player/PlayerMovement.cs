@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sideMovementLimit;
 
     [SerializeField] private Animator animator;
-    private static readonly int Speed = Animator.StringToHash("Speed");
 
     private Vector3 joystickDirection => JoystickBase.Instance.joystickDirection;
 
@@ -36,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         var newPosX = Mathf.Clamp(pos.x, -sideMovementLimit, sideMovementLimit);
         transform.position = new Vector3(newPosX, pos.y, pos.z);
 
-        animator.SetFloat(Speed, Mathf.Abs(joystickDirection.y));
+        animator.SetFloat("Speed", Mathf.Abs(joystickDirection.y));
         
         if (joystickDirection != Vector3.zero)
         {
