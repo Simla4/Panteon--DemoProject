@@ -12,9 +12,9 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private float sidewaySpeed = 3;
     [SerializeField] private Animator animator;
 
-    [SerializeField] private Transform targetPoint;
     [SerializeField] private NavMeshAgent agent;
 
+    private Transform targetPoint;
     private Vector3 firstPos;
 
     #endregion
@@ -23,6 +23,7 @@ public class AIMovement : MonoBehaviour
 
     private void Start()
     {
+        targetPoint = FinishPath.Instance.FinishPathTransform;
         agent.SetDestination(targetPoint.position);
         agent.speed = speed;
         firstPos = transform.position;
@@ -32,17 +33,6 @@ public class AIMovement : MonoBehaviour
     {
         AIAnimation();
         ControlYAxis();
-    }
-
-    private void OnEnable()
-    {
-        EventManger.OnPlayerReachFinish += StopAI;
-    }
-
-    private void OnDisable()
-    {
-        EventManger.OnPlayerReachFinish -= StopAI;
-        
     }
 
     #endregion
@@ -71,10 +61,9 @@ public class AIMovement : MonoBehaviour
         }
     }
 
-    private void StopAI()
+    private void ResetAI()
     {
-        agent.speed = 0;
-        transform.position = firstPos;
+        gameObject.SetActive(true);
     }
 
     public void ReturnNavMeshAgent()
