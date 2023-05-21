@@ -12,8 +12,6 @@ public class RotatingPlatform : MonoBehaviour
             var adjustSpeed = rotationSpeed * Time.deltaTime;
             
             other.transform.position += (isPlatformRotatingRight ?Vector3.right : Vector3.left) * adjustSpeed;
-            
-            Debug.Log("RotatingPlatform");
         }
         
     }

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1;
+        
+        EventManger.OnGameStart?.Invoke();
     }
     
 }

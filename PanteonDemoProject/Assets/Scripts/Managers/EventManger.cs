@@ -10,5 +10,6 @@ public static class EventManger
     public static Action OnCollisionObstacle;
     public static Action OnDeathCountChanged;
     public static Action OnPlayerReachFinish;
+    public static Action OnGameStart;
     public static Action<int> OnPlayerRankChanged;
 }

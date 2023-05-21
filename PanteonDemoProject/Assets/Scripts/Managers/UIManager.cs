@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
         EventManger.OnDeathCountChanged += ChangeDeathCountTxt;
         EventManger.OnPlayerRankChanged += ChangePlayerRankTxt;
         EventManger.OnPlayerReachFinish += ShowPaintUI;
+        EventManger.OnGameStart += ShowInGameUI;
     }
 
     private void OnDisable()
@@ -37,6 +38,8 @@ public class UIManager : MonoBehaviour
         EventManger.OnDeathCountChanged -= ChangeDeathCountTxt;
         EventManger.OnPlayerReachFinish -= ShowPaintUI;
         EventManger.OnPlayerRankChanged -= ChangePlayerRankTxt;
+        EventManger.OnGameStart -= ShowInGameUI;
+
     }
 
     #endregion
