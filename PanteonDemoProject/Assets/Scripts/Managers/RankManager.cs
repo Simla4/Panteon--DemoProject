@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RankManager : MonoBehaviour
+public class RankManager : MonoSingleton<RankManager>
 {
     [SerializeField] private List<Transform> charactersTransforms = new List<Transform>();
     [SerializeField] private Transform playerTransform;
+
+    public List<Transform> CharactersTransforms => charactersTransforms;
 
     private void Update()
     {

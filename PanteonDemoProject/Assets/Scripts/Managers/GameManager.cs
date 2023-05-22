@@ -14,12 +14,12 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManger.OnNextLevel += StopGame;
+        //EventManger.OnNextLevel += StopGame;
     }
 
     private void OnDisable()
     {
-        EventManger.OnNextLevel -= StopGame;
+        //EventManger.OnNextLevel -= StopGame;
     }
 
     #endregion
@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1;
-        
         EventManger.OnGameStart?.Invoke();
     }
 

@@ -13,9 +13,12 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private NavMeshSurface navMeshSurface;
     [SerializeField] private P3dChannelCounterText channelCounterText;
+    [SerializeField] private P3dChannelCounter channelCounter;
+    [SerializeField] private Transform levelParent;
 
     private int currentLevel;
     private bool isPaintingActive = false;
+    private GameObject previousLevel;
 
     #endregion
 
@@ -35,7 +38,8 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
-        levels[currentLevel].SetActive(true);
+        var level = Instantiate(levels[currentLevel], levelParent, true);
+        previousLevel = level;
         StartCoroutine(BuildNavMeshPath());
     }
 
@@ -57,7 +61,7 @@ public class LevelManager : MonoBehaviour
 
     private void ChangeLevel()
     {
-        levels[currentLevel].SetActive(false);
+        previousLevel.SetActive(false);
         
         currentLevel++;
 
@@ -65,14 +69,17 @@ public class LevelManager : MonoBehaviour
         {
             currentLevel = 0;
         }
-        
-        levels[currentLevel].SetActive(true);
-        
+
+        var level = Instantiate(levels[currentLevel], levelParent, true);
+        previousLevel = level;
+
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
 
         StartCoroutine(BuildNavMeshPath());
 
         isPaintingActive = false;
+        
+        ChangeAISetActive();
         
         EventManger.OnLoadedNextLevel?.Invoke();
         
@@ -80,13 +87,24 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator BuildNavMeshPath()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.01f);
         navMeshSurface.BuildNavMesh();
     }
 
     private void ChangeIsPaintingActiveStatus()
     {
         isPaintingActive = true;
+    }
+
+    private void ChangeAISetActive()
+    {
+        var aiList = RankManager.Instance.CharactersTransforms;
+
+        for (int i = 0; i < aiList.Count; i++)
+        {
+            aiList[i].position = Vector3.zero;
+            aiList[i].gameObject.SetActive(true);
+        }
     }
 
     #endregion
