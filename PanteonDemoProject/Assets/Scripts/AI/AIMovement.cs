@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,7 +16,7 @@ public class AIMovement : MonoBehaviour
 
     [SerializeField] private NavMeshAgent agent;
 
-    private Transform targetPoint;
+    [SerializeField] private Transform targetPoint;
     private Vector3 firstPos;
 
     #endregion
@@ -35,12 +37,15 @@ public class AIMovement : MonoBehaviour
     private void OnEnable()
     {
         EventManger.OnLoadedNextLevel += ResetAI;
+        EventManger.OnPlayerReachFinish += StopAI;
+        EventManger.OnGameStart += MoveAI;
     }
 
     private void OnDisable()
     {
         EventManger.OnLoadedNextLevel -= ResetAI;
-
+        EventManger.OnPlayerReachFinish -= StopAI;
+        EventManger.OnGameStart -= MoveAI;
     }
 
     #endregion
@@ -52,7 +57,7 @@ public class AIMovement : MonoBehaviour
         animator.SetFloat("Speed", agent.speed);
     }
 
-    public void MoveAI()
+    public void DisableNavMeshAgent()
     {
         agent.enabled = false;
         transform.position += Vector3.forward * speed * Time.deltaTime;
@@ -69,6 +74,16 @@ public class AIMovement : MonoBehaviour
         }
     }
 
+    public void StopAI()
+    {
+        agent.speed = 0;
+    }
+
+    private void MoveAI()
+    {
+        agent.speed = 8;
+    }
+
     private void ResetAI()
     {
         StartCoroutine(ResetAINumarator());
@@ -76,13 +91,14 @@ public class AIMovement : MonoBehaviour
 
     IEnumerator ResetAINumarator()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
         gameObject.SetActive(true);
+        targetPoint = FinishPath.Instance.FinishPathTransform;
         agent.SetDestination(targetPoint.position);
         transform.position = firstPos;
     }
 
-    public void ReturnNavMeshAgent()
+    public void EnableNavMeshAgent()
     {
         agent.enabled = true;
         agent.SetDestination(targetPoint.position);
@@ -100,12 +116,12 @@ public class AIMovement : MonoBehaviour
     private void ReturnToStartPosition()
     {
         transform.position = Vector3.zero;
-        ReturnNavMeshAgent();
+        EnableNavMeshAgent();
     }
 
     IEnumerator AsigdDataEnumerator()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.05f);
         
         targetPoint = FinishPath.Instance.FinishPathTransform;
         agent.SetDestination(targetPoint.position);
