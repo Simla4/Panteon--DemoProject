@@ -15,6 +15,7 @@ public class AICollision : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             gameObject.SetActive(false);
+            aiMovement.StopAI();
         }
     }
 
@@ -22,7 +23,7 @@ public class AICollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            aiMovement.MoveAI();
+            aiMovement.DisableNavMeshAgent();
         }
     }
 
@@ -30,7 +31,7 @@ public class AICollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            aiMovement.ReturnNavMeshAgent();
+            aiMovement.EnableNavMeshAgent();
         }
     }
 }
