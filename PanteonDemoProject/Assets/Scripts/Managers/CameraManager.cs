@@ -24,6 +24,8 @@ public class CameraManager : MonoSingleton<CameraManager>
     private void ActiveThePaintableWallCamera()
     {
         paintableWallCamera.Priority += 2;
+        paintableWallCamera.Follow = FinishPath.Instance.FinishPathTransform;
+        paintableWallCamera.LookAt = FinishPath.Instance.FinishPathTransform;
     }
 
     private void ActiveMainCamra()
