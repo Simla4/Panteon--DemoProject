@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4814062132139166223}
   - component: {fileID: 731592221739263290}
   - component: {fileID: 609144989288559179}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RotatingPlatformBlue
   m_TagString: RotatingPlatform
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6963974691143818717}
   - component: {fileID: 3469287837223321047}
   - component: {fileID: 7227447574472717498}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RotatingPlatformBlue
   m_TagString: RotatingPlatform
   m_Icon: {fileID: 0}
