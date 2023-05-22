@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 2585341526867410892}
   - component: {fileID: 2585341526867410893}
   - component: {fileID: 2585341526867410886}
+  - component: {fileID: 2952413799254837485}
   m_Layer: 0
   m_Name: PaintableObject
   m_TagString: Untagged
@@ -230,7 +231,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 2585341526867410892}
-  cooldown: -4652.1846
+  cooldown: -4663.946
   currentReader:
     requested: 0
     buffer: {fileID: 0}
@@ -272,6 +273,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: 8931bb92705e3734d967f211d0a7d7f0, type: 3}
+--- !u!114 &2952413799254837485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2585341526867410895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba8f0e5eb0d24e4e970e1d09c76f957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableTexture: {fileID: 2585341526867410892}
 --- !u!1 &2585341527557182011
 GameObject:
   m_ObjectHideFlags: 0

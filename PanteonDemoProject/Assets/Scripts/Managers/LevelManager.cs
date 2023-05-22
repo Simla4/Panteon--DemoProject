@@ -13,8 +13,6 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private NavMeshSurface navMeshSurface;
     [SerializeField] private P3dChannelCounterText channelCounterText;
-    [SerializeField] private P3dChannelCounter channelCounter;
-    [SerializeField] private Transform levelParent;
 
     private int currentLevel;
     private bool isPaintingActive = false;
@@ -38,7 +36,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
-        var level = Instantiate(levels[currentLevel], levelParent, true);
+        var level = Instantiate(levels[currentLevel]);
         previousLevel = level;
         StartCoroutine(BuildNavMeshPath());
     }
@@ -70,7 +68,7 @@ public class LevelManager : MonoBehaviour
             currentLevel = 0;
         }
 
-        var level = Instantiate(levels[currentLevel], levelParent, true);
+        var level = Instantiate(levels[currentLevel]);
         previousLevel = level;
 
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
