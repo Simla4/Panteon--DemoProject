@@ -20,9 +20,22 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
         EventManger.OnPlayerReachFinish -= ResetJoystick;
     }
 
+    private void Start()
+    {
+        DisableJoystick();
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("OnPointerDown");
+        EnableJoystick();
+        joystickBase.position = eventData.position;
+    }
     public void OnPointerUp(PointerEventData eventData)
     {
+        Debug.Log("OnPointerUp");
         ResetJoystick();
+        DisableJoystick();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -34,15 +47,22 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
         joystickTip.position = joystickBase.position + offset;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        
-    }
 
     private void ResetJoystick()
     {
         joystickDirection = Vector3.zero;
         joystickTip.position = joystickBase.position;
+        DisableJoystick();
         
+    }
+
+    private void EnableJoystick()
+    {
+        joystickBase.gameObject.SetActive(true);
+    }
+
+    private void DisableJoystick()
+    {
+        joystickBase.gameObject.SetActive(false);
     }
 }
