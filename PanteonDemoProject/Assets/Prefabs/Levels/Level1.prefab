@@ -7037,7 +7037,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2585341526867410893, guid: e354d936953db824286b8aac81b9ad79, type: 3}
       propertyPath: cooldown
-      value: -5022.802
+      value: -5042.6504
       objectReference: {fileID: 0}
     - target: {fileID: 2585341527557182010, guid: e354d936953db824286b8aac81b9ad79, type: 3}
       propertyPath: m_RootOrder
@@ -7276,14 +7276,6 @@ PrefabInstance:
     - target: {fileID: 916834004937479340, guid: 6127e06d4001b454c87f81a8e76f508e, type: 3}
       propertyPath: m_Name
       value: RotatingPlatformBlue
-      objectReference: {fileID: 0}
-    - target: {fileID: 916834004937479340, guid: 6127e06d4001b454c87f81a8e76f508e, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766560505118913529, guid: 6127e06d4001b454c87f81a8e76f508e, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8333336985642182974, guid: 6127e06d4001b454c87f81a8e76f508e, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -1367,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &535049170
 Transform:
   m_ObjectHideFlags: 0
@@ -4753,10 +4753,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373733988}
     m_Modifications:
-    - target: {fileID: 242687403357847650, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1336448635962611120, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
       propertyPath: m_Name
       value: PlayerRoot
@@ -4805,18 +4801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: rotationSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: sideMovemntLimit
-      value: 4.8
-      objectReference: {fileID: 0}
+    - target: {fileID: 4775360897510082647, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
 --- !u!1 &1927130095

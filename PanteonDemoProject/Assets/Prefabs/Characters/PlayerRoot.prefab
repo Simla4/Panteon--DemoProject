@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotationSpeed: 7
+  rotationSpeed: 100
   sideMovementLimit: 4.8
   animator: {fileID: 8586665942887736716}
 --- !u!136 &6354005006679476168

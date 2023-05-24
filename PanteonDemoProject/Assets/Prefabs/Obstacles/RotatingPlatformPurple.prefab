@@ -130,8 +130,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8775324984817668593}
   - component: {fileID: 9184163096918409473}
-  - component: {fileID: 1829733526715916197}
   - component: {fileID: 5530848936703632266}
+  - component: {fileID: 873565801488553140}
   m_Layer: 0
   m_Name: RotatingPlatformPurple
   m_TagString: RotatingPlatform
@@ -171,20 +171,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 62
   m_CollisionDetection: 2
---- !u!114 &1829733526715916197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8251693173837564747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7a5662feb09ca49a76899d3d2250c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 2
-  isPlatformRotatingRight: 1
 --- !u!65 &5530848936703632266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -198,3 +184,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.064595, y: 27.573225, z: 10.004389}
   m_Center: {x: 0.00000047683716, y: 7.30194, z: 0}
+--- !u!114 &873565801488553140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251693173837564747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7a5662feb09ca49a76899d3d2250c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 3
+  isPlatformRotatingRight: 1

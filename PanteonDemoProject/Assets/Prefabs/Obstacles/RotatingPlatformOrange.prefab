@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572782919815024150}
-  - component: {fileID: 5894661895703707372}
   - component: {fileID: 94130559999303398}
   - component: {fileID: 6135596560122599307}
+  - component: {fileID: 4155840315234698712}
   m_Layer: 0
   m_Name: RotatingPlatformOrange
   m_TagString: RotatingPlatform
@@ -35,20 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5894661895703707372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916834004937479340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7a5662feb09ca49a76899d3d2250c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 3
-  isPlatformRotatingRight: 0
 --- !u!54 &94130559999303398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +64,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.006061, y: 21.954897, z: 10.004389}
   m_Center: {x: 0.4707322, y: 1.5106993, z: 0}
+--- !u!114 &4155840315234698712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916834004937479340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7a5662feb09ca49a76899d3d2250c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 3
+  isPlatformRotatingRight: 0
 --- !u!1 &1766560505118913529
 GameObject:
   m_ObjectHideFlags: 0
