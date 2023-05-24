@@ -57,6 +57,7 @@ public class AIMovement : MonoBehaviour
     public void DisableNavMeshAgent()
     {
         agent.enabled = false;
+        Debug.Log("Disable: " + agent.enabled);
         transform.position += Vector3.forward * speed * Time.deltaTime;
 
 
@@ -98,6 +99,7 @@ public class AIMovement : MonoBehaviour
     public void EnableNavMeshAgent()
     {
         agent.enabled = true;
+        Debug.Log("Enable: " + agent.enabled);
         agent.SetDestination(targetPoint.position);
     }
     

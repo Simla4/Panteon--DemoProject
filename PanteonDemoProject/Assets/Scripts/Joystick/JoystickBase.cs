@@ -27,13 +27,11 @@ public class JoystickBase : MonoSingleton<JoystickBase>,IPointerDownHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
         EnableJoystick();
         joystickBase.position = eventData.position;
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("OnPointerUp");
         ResetJoystick();
         DisableJoystick();
     }
