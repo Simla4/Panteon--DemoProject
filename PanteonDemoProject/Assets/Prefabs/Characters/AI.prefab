@@ -93,9 +93,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 1198017928621235787}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Speed: 3.5
-  m_Acceleration: 20
+  m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 200
   m_StoppingDistance: 0.1
@@ -136,6 +136,7 @@ MonoBehaviour:
   animator: {fileID: 689659327941846115}
   agent: {fileID: 1198017928621235785}
   targetPoint: {fileID: 0}
+  rb: {fileID: 5585845686581611498}
 --- !u!54 &5585845686581611498
 Rigidbody:
   m_ObjectHideFlags: 0

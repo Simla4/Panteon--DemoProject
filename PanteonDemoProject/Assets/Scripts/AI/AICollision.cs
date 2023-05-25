@@ -17,13 +17,18 @@ public class AICollision : MonoBehaviour
             gameObject.SetActive(false);
             aiMovement.StopAI();
         }
+        
+        if (other.gameObject.CompareTag("RotatingPlatform"))
+        {
+            aiMovement.DisableNavMeshAgent();
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            aiMovement.DisableNavMeshAgent();
+            aiMovement.SideMovement();
         }
     }
 

@@ -804,18 +804,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1198017928621235791, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
-      propertyPath: targetPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198017928621235791, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
-      propertyPath: targetPoint2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5585845686581611498, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
-      propertyPath: m_Constraints
-      value: 122
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
 --- !u!4 &242154564 stripped
@@ -3533,7 +3521,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a628dc956f251234b802dd97e23598db, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!4 &1390428460
 Transform:
@@ -4801,10 +4789,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4775360897510082647, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 10f89e4cc0551874fbd6f8053b601e5b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
 --- !u!1 &1927130095

@@ -14,6 +14,7 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
 
     [SerializeField] private Transform targetPoint;
+    [SerializeField] private Rigidbody rb;
     private Vector3 firstPos;
 
     #endregion
@@ -56,8 +57,12 @@ public class AIMovement : MonoBehaviour
 
     public void DisableNavMeshAgent()
     {
+        agent.speed = 0;
         agent.enabled = false;
-        Debug.Log("Disable: " + agent.enabled);
+    }
+
+    public void SideMovement()
+    {
         transform.position += Vector3.forward * speed * Time.deltaTime;
 
 
@@ -99,7 +104,7 @@ public class AIMovement : MonoBehaviour
     public void EnableNavMeshAgent()
     {
         agent.enabled = true;
-        Debug.Log("Enable: " + agent.enabled);
+        agent.speed = speed;
         agent.SetDestination(targetPoint.position);
     }
     
@@ -114,7 +119,7 @@ public class AIMovement : MonoBehaviour
 
     private void ReturnToStartPosition()
     {
-        transform.position = Vector3.zero;
+        transform.position = transform.position;
         EnableNavMeshAgent();
     }
 
