@@ -64,7 +64,8 @@ public class AIMovement : MonoBehaviour
     public void SideMovement()
     {
         transform.position += Vector3.forward * speed * Time.deltaTime;
-
+        
+        animator.SetFloat("Speed", speed);
 
         if (transform.position.x < -1)
         {
@@ -105,6 +106,7 @@ public class AIMovement : MonoBehaviour
     {
         agent.enabled = true;
         agent.speed = speed;
+        animator.SetFloat("Speed", agent.speed);
         agent.SetDestination(targetPoint.position);
     }
     
