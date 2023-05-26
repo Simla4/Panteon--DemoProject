@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class AICollision : MonoBehaviour
 {
-    [SerializeField] private AIMovement aiMovement;
+    [SerializeField] private AIMovement aıMovement;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -15,12 +16,6 @@ public class AICollision : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             gameObject.SetActive(false);
-            aiMovement.StopAI();
-        }
-        
-        if (other.gameObject.CompareTag("RotatingPlatform"))
-        {
-            aiMovement.DisableNavMeshAgent();
         }
     }
 
@@ -28,15 +23,7 @@ public class AICollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RotatingPlatform"))
         {
-            aiMovement.SideMovement();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("RotatingPlatform"))
-        {
-            aiMovement.EnableNavMeshAgent();
+            aıMovement.SideMovement();
         }
     }
 }

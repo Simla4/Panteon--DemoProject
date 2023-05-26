@@ -1,21 +1,19 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private float speed = 8;
-    [SerializeField] private float sidewaySpeed = 3;
+    [SerializeField] private float speed = 7;
+    [SerializeField] private float sidewaySpeed = 5;
     [SerializeField] private Animator animator;
 
-    [SerializeField] private NavMeshAgent agent;
-
-    [SerializeField] private Transform targetPoint;
-    [SerializeField] private Rigidbody rb;
     private Vector3 firstPos;
+
+    public float Speed => speed;
 
     #endregion
 
@@ -23,50 +21,38 @@ public class AIMovement : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AsigdDataEnumerator());
+        firstPos = transform.position;
     }
 
     private void Update()
     {
-        AIAnimation();
+        MoveForward();
         ControlYAxis();
+        AIAnimation();
     }
 
     private void OnEnable()
     {
-        EventManger.OnLoadedNextLevel += ResetAI;
-        EventManger.OnPlayerReachFinish += StopAI;
-        EventManger.OnGameStart += MoveAI;
+        EventManger.OnLoadedNextLevel += ReturnToFirstPos;
     }
 
     private void OnDisable()
     {
-        EventManger.OnLoadedNextLevel -= ResetAI;
-        EventManger.OnPlayerReachFinish -= StopAI;
-        EventManger.OnGameStart -= MoveAI;
+        EventManger.OnLoadedNextLevel += ReturnToFirstPos;
+
     }
 
     #endregion
 
-    #region MyRegion
+    #region OtherMethods
 
-    private void AIAnimation()
+    private void MoveForward()
     {
-        animator.SetFloat("Speed", agent.speed);
-    }
-
-    public void DisableNavMeshAgent()
-    {
-        agent.speed = 0;
-        agent.enabled = false;
+        transform.position += Vector3.forward * (speed * Time.deltaTime);
     }
 
     public void SideMovement()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
-        
-        animator.SetFloat("Speed", speed);
-
         if (transform.position.x < -1)
         {
             transform.position += Vector3.right * sidewaySpeed * Time.deltaTime;
@@ -77,63 +63,24 @@ public class AIMovement : MonoBehaviour
 
         }
     }
-
-    public void StopAI()
-    {
-        agent.speed = 0;
-    }
-
-    private void MoveAI()
-    {
-        agent.speed = 8;
-    }
-
-    private void ResetAI()
-    {
-        StartCoroutine(ResetAINumarator());
-    }
-
-    IEnumerator ResetAINumarator()
-    {
-        yield return new WaitForSeconds(0.1f);
-        gameObject.SetActive(true);
-        targetPoint = FinishPath.Instance.FinishPathTransform;
-        agent.SetDestination(targetPoint.position);
-        transform.position = firstPos;
-    }
-
-    public void EnableNavMeshAgent()
-    {
-        agent.enabled = true;
-        agent.speed = speed;
-        animator.SetFloat("Speed", agent.speed);
-        agent.SetDestination(targetPoint.position);
-    }
     
     private void ControlYAxis()
     {
         if (transform.position.y <= -3.5f)
         {
-            ReturnToStartPosition();
+            ReturnToFirstPos();
         }
-            
     }
 
-    private void ReturnToStartPosition()
+    private void ReturnToFirstPos()
     {
-        transform.position = transform.position;
-        EnableNavMeshAgent();
+        transform.position = firstPos;
     }
 
-    IEnumerator AsigdDataEnumerator()
+    private void AIAnimation()
     {
-        yield return new WaitForSeconds(0.05f);
-        
-        targetPoint = FinishPath.Instance.FinishPathTransform;
-        agent.SetDestination(targetPoint.position);
-        agent.speed = speed;
-        firstPos = transform.position;
+        animator.SetFloat("Speed", speed);
     }
-    
+
     #endregion
 }
