@@ -12,16 +12,6 @@ public class GameManager : MonoBehaviour
         StopGame();
     }
 
-    // private void OnEnable()
-    // {
-    //     EventManger.OnNextLevel += StopGame;
-    // }
-    //
-    // private void OnDisable()
-    // {
-    //     EventManger.OnNextLevel -= StopGame;
-    // }
-
     #endregion
 
     #region OtherMethod

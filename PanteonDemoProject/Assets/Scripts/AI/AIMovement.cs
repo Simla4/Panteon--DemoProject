@@ -30,7 +30,6 @@ public class AIMovement : MonoBehaviour
 
     private void Update()
     {
-        AIAnimation();
         ControlYAxis();
     }
 
@@ -87,6 +86,7 @@ public class AIMovement : MonoBehaviour
     private void MoveAI()
     {
         agent.speed = currentSpeed;
+        AIAnimation();
     }
 
     private void ResetAI()
