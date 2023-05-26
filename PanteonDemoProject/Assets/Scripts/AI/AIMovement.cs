@@ -16,6 +16,7 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private Transform targetPoint;
     [SerializeField] private Rigidbody rb;
     private Vector3 firstPos;
+    private float currentSpeed;
 
     #endregion
 
@@ -24,6 +25,7 @@ public class AIMovement : MonoBehaviour
     private void Start()
     {
         StartCoroutine(AsigdDataEnumerator());
+        currentSpeed = agent.speed;
     }
 
     private void Update()
@@ -52,20 +54,18 @@ public class AIMovement : MonoBehaviour
 
     private void AIAnimation()
     {
-        animator.SetFloat("Speed", agent.speed);
+        animator.SetFloat("Speed", speed);
     }
 
     public void DisableNavMeshAgent()
     {
-        agent.speed = 0;
+        currentSpeed = agent.speed;
         agent.enabled = false;
     }
 
     public void SideMovement()
     {
         transform.position += Vector3.forward * speed * Time.deltaTime;
-        
-        animator.SetFloat("Speed", speed);
 
         if (transform.position.x < -1)
         {
@@ -85,7 +85,7 @@ public class AIMovement : MonoBehaviour
 
     private void MoveAI()
     {
-        agent.speed = 8;
+        agent.speed = currentSpeed;
     }
 
     private void ResetAI()
@@ -105,8 +105,6 @@ public class AIMovement : MonoBehaviour
     public void EnableNavMeshAgent()
     {
         agent.enabled = true;
-        agent.speed = speed;
-        animator.SetFloat("Speed", agent.speed);
         agent.SetDestination(targetPoint.position);
     }
     
@@ -131,7 +129,6 @@ public class AIMovement : MonoBehaviour
         
         targetPoint = FinishPath.Instance.FinishPathTransform;
         agent.SetDestination(targetPoint.position);
-        agent.speed = speed;
         firstPos = transform.position;
     }
     

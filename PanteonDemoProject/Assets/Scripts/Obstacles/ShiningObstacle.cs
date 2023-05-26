@@ -10,12 +10,10 @@ public class ShiningObstacle : MonoBehaviour, IObstacle
     [SerializeField] private new ParticleSystem particleSystem;
 
     private int nextPosIndex = 0;
-    private ParticleSystem.MinMaxGradient firstColor;
 
     private void Update()
     {
         MoveObstacle();
-        firstColor = particleSystem.main.startColor;
     }
 
     private void MoveObstacle()
@@ -44,6 +42,6 @@ public class ShiningObstacle : MonoBehaviour, IObstacle
         var particleSystemMain = particleSystem.main;
         particleSystemMain.startColor = Color.red;
         yield return new WaitForSeconds(0.25f);
-        particleSystemMain.startColor = firstColor;
+        particleSystemMain.startColor = Color.white;
     }
 }

@@ -601,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -630,6 +630,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -762,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.11
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -770,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.32
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -800,9 +824,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
       value: AI (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235790, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
@@ -1919,7 +1971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.39
+      value: -2.312
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1948,6 +2000,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -2239,7 +2315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.42
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2247,7 +2323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.37
+      value: -3.9099998
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2276,6 +2352,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -2925,7 +3025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.77
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2933,7 +3033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.35
+      value: -2.312
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2963,9 +3063,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
       value: AI (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235790, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235791, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: targetPoint
@@ -3007,7 +3135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.32
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3036,6 +3164,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -3519,7 +3671,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
@@ -3694,7 +3846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.75
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3724,9 +3876,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
       value: AI (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235790, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235791, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: targetPoint
@@ -4478,7 +4658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.17
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4486,7 +4666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.7
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4515,6 +4695,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -4789,6 +4993,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3810608082850427026, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
+      propertyPath: speed
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe49066b4cb464ebbb89aad652a228, type: 3}
 --- !u!1 &1927130095
@@ -5037,7 +5245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.69
+      value: -2.312
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5066,6 +5274,30 @@ PrefabInstance:
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
@@ -5103,7 +5335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.423
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5111,7 +5343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.968
+      value: -2.3119998
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235784, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5142,12 +5374,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Speed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_AutoRepath
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_AutoBraking
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_Acceleration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_WalkableMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: avoidancePriority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198017928621235785, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1198017928621235787, guid: 45d11d6ee7ad42843950771fcc68efe4, type: 3}
       propertyPath: m_Name
