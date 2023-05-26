@@ -81,6 +81,7 @@ public class AIMovement : MonoBehaviour
     public void StopAI()
     {
         agent.speed = 0;
+        animator.SetFloat("Speed", 0);
     }
 
     private void MoveAI()
