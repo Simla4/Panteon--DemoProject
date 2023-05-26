@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3720695399820163336}
   m_Layer: 6
   m_Name: Rotator
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,9 +96,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8089639895943173396}
+  - component: {fileID: 5881019556559390945}
   m_Layer: 0
   m_Name: RotatingStick
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,22 @@ Transform:
   m_Father: {fileID: 1817702393117601008}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &5881019556559390945
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490318588158371130}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 1.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &458413434848519827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,10 +213,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.393404
+  m_Radius: 0.15627599
   m_Height: 2.1882305
   m_Direction: 2
-  m_Center: {x: 0.000002026558, y: -0.022046506, z: 1.5412002}
+  m_Center: {x: 0.0000020224402, y: -0.002673775, z: 1.5412}
 --- !u!114 &2912834824996057941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,10 +285,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f34212872068ff544ab6fe6d71558638, type: 3}
       propertyPath: m_Name
       value: Rotator
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f34212872068ff544ab6fe6d71558638, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34212872068ff544ab6fe6d71558638, type: 3}

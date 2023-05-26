@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> levels = new List<GameObject>();
 
+    [SerializeField] private NavMeshSurface navMeshSurface;
     [SerializeField] private P3dChannelCounterText channelCounterText;
 
     private int currentLevel;
@@ -37,6 +38,7 @@ public class LevelManager : MonoBehaviour
         currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
         var level = Instantiate(levels[currentLevel]);
         previousLevel = level;
+        StartCoroutine(BuildNavMeshPath());
     }
 
     private void OnEnable()
@@ -71,12 +73,20 @@ public class LevelManager : MonoBehaviour
 
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
 
+        StartCoroutine(BuildNavMeshPath());
+
         isPaintingActive = false;
         
         ChangeAISetActive();
         
         EventManger.OnLoadedNextLevel?.Invoke();
         
+    }
+
+    IEnumerator BuildNavMeshPath()
+    {
+        yield return new WaitForSeconds(0.01f);
+        navMeshSurface.BuildNavMesh();
     }
 
     private void ChangeIsPaintingActiveStatus()

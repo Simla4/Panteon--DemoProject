@@ -4824,9 +4824,10 @@ GameObject:
   - component: {fileID: 5028176787035310894}
   - component: {fileID: 1936432870}
   - component: {fileID: 1803879848}
+  - component: {fileID: 5296028297507778455}
   m_Layer: 6
   m_Name: ShiningObstacle
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4898,6 +4899,22 @@ CapsuleCollider:
   m_Height: 5.6719284
   m_Direction: 1
   m_Center: {x: -0.059364557, y: 2.3359642, z: 0}
+--- !u!208 &5296028297507778455
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962241567306378822}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.6, y: 1, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8962241568581935385
 GameObject:
   m_ObjectHideFlags: 0
