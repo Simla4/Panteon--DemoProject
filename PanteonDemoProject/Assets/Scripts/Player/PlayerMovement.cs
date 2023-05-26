@@ -31,9 +31,6 @@ public class PlayerMovement : MonoBehaviour
     {
         var worldDirection = new Vector3(joystickDirection.x, 0, joystickDirection.y);
         transform.position += worldDirection * (speed * Time.deltaTime);
-        // var pos = transform.position;
-        // var newPosX = Mathf.Clamp(pos.x, -sideMovementLimit, sideMovementLimit);
-        // transform.position = new Vector3(newPosX, pos.y, pos.z);
 
         animator.SetFloat("Speed", Mathf.Abs(joystickDirection.y));
         
