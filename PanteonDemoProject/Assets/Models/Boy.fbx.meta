@@ -14,11 +14,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: phong1
     second: {fileID: 2100000, guid: 0d58556fff9599145ae2db11fdb7f398, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: skin1
-    second: {fileID: 9171952328373019990, guid: eb5353405a3318e4dbbccd86129c11e4, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

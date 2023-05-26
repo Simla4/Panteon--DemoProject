@@ -61,6 +61,7 @@ public class AIMovement : MonoBehaviour
     {
         currentSpeed = agent.speed;
         agent.enabled = false;
+        rb.isKinematic = false;
     }
 
     public void SideMovement()
@@ -81,7 +82,6 @@ public class AIMovement : MonoBehaviour
     public void StopAI()
     {
         agent.speed = 0;
-        animator.SetFloat("Speed", 0);
     }
 
     private void MoveAI()
@@ -106,6 +106,7 @@ public class AIMovement : MonoBehaviour
     public void EnableNavMeshAgent()
     {
         agent.enabled = true;
+        rb.isKinematic = true;
         agent.SetDestination(targetPoint.position);
     }
     
@@ -120,7 +121,7 @@ public class AIMovement : MonoBehaviour
 
     private void ReturnToStartPosition()
     {
-        transform.position = transform.position;
+        transform.position = firstPos;
         EnableNavMeshAgent();
     }
 

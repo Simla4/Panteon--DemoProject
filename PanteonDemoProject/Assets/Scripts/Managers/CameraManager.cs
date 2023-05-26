@@ -12,13 +12,13 @@ public class CameraManager : MonoSingleton<CameraManager>
     private void OnEnable()
     {
         EventManger.OnPlayerReachFinish += ActiveThePaintableWallCamera;
-        EventManger.OnLoadedNextLevel += ActiveMainCamra;
+        EventManger.OnLevelCompleted += ActiveMainCamra;
     }
 
     private void OnDisable()
     {
         EventManger.OnPlayerReachFinish -= ActiveThePaintableWallCamera;
-        EventManger.OnLoadedNextLevel -= ActiveMainCamra;
+        EventManger.OnLevelCompleted -= ActiveMainCamra;
     }
 
     private void ActiveThePaintableWallCamera()
